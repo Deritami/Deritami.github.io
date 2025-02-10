@@ -1,0 +1,318 @@
+/* for screen widths 382px and less - mobile-first design*/
+body {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+article, aside, h1, h2, h3, p {
+	margin: 0;
+	padding: 0;
+}
+article, aside {
+	margin-bottom: 1em;
+}
+p {
+	font-size: .91em;
+	padding-bottom: .5em;
+	line-height: 130%;
+}
+
+a {
+	font-weight: bold;
+	text-decoration: none;
+}
+
+a:hover, a:focus {
+	color: black !important;
+}
+/* header styles */
+header {
+	width: 100%;
+	padding: 2em 0;
+	text-align: center;
+	background-image: linear-gradient(
+		to bottom right, #B8B996 0%, #202019 100%);
+
+}
+header img {
+	width: 8.08%;
+	max-width: 80px;
+	min-width: 40px;
+}
+header h2 {
+	font-size: 1.13em; 
+	color: white;
+	text-shadow: 2px 3px 0 black;
+	margin-bottom: .25em;
+}
+header h3 {
+	font-size: .75em;
+	font-style: italic;
+	margin-left: 0;
+}
+#mobile_menu {
+	display: block;
+}
+.slicknav_menu {
+	background-color: #B5001B !important;
+}
+/* hide the nav menu */
+#nav_menu {
+	display: none;
+}
+/* article styles */
+article {
+	width: 95.96%;
+	margin: 0 2.02%;
+	padding: 1.5em 0 0 0;
+}
+@font-face {
+	font-family: Conspiracy;
+	src: url("/fonts/CONSPB.TTF");
+}
+article h1 {
+	font-family: Conspiracy;
+	font-size: 180%;
+	margin-bottom: .35em;
+}
+article img {
+	margin-bottom: 1em;
+	width: 100%;
+}
+article p {
+	margin-bottom: .5em;
+}
+/* sidebar styles */
+aside {
+	width: 91.92%;
+	padding-left: 4.04%;
+}
+aside h2 {
+	font-size: 1em;
+	padding-bottom: .5em;
+}
+aside ul {
+	margin-top: 0;
+	margin-bottom: 1.5em;
+	padding-left: 2em;	
+}
+aside li {
+	font-size: .81em;
+	padding-bottom: .42em;
+}
+aside a:link, aside a:visited {
+	color: #B5001B !important;  
+}
+
+aside a:hover, aside a:focus {
+	color: black !important;       /*don't understand why the regular declaration for a element doesn't work on this one*/
+}
+
+/* footer styles */
+footer {
+	width: 100%;
+	background-color: #797961;
+	border-top: 1px solid black;
+	padding-top: .7em;
+}
+footer p {
+	font-size: .69em;
+	text-align: center;
+}
+
+/* media queries */
+
+/* increase font sizes and float article image */
+@media only screen and (min-width: 383px) {
+    header h2 {
+        font-size: 1.375em;
+    }
+    header h3 {
+        font-size: .875em;
+    }
+    article img {
+        float: left;
+        max-width: 50%;
+        margin-right: 2%;
+    }
+	article h1 {
+		font-size: 1.125em;
+	}
+	footer p {
+        font-size: .75em;
+    }
+}
+
+/* increase font sizes */
+@media only screen and (min-width: 481px) {
+	header h2 {
+		font-size: 1.62em;
+	}
+	header h3 {
+		font-size: 1em;
+	}
+}
+
+/* float article, aside, and header image and display navigation menu */
+@media only screen and (min-width: 797px) {
+	html {
+		background-image: linear-gradient(to bottom, white 0%, #5469b6 100%);
+	}
+	body {
+		width: 96%;
+		background-color: white;
+		margin: 15px auto;
+		border: 1px solid black;
+	}
+	header {
+		text-align: left;
+	}
+	header img {
+		float: left;
+		margin-left: 2.02%
+	}
+	header h2 {
+		font-size: 2.25em;
+		margin-left: 12.12%;
+	}
+	header h3 {
+		font-size: 1.25em;
+		margin-left: 12.12121%;
+	}
+	#nav_menu {
+		display: block;
+	}
+	#mobile_menu {
+		display: none;
+	}
+	/* operation of for the navigation menu */
+	#nav_menu ul {
+		width: 100%;
+		list-style-type: none;
+		position: relative;
+	}
+	#nav_menu ul ul {
+		display: none;
+		position: absolute;
+		top: 100%;
+	}
+	#nav_menu ul ul li {
+		float: none;
+		position: relative;
+	}
+	#nav_menu ul ul li ul {
+		position: absolute;
+		left: 100%;
+		top: 0;
+	}
+	#nav_menu ul li.lastitem ul li ul {
+		position: absolute;
+		left: -100%;
+		top: 0;
+	}
+	#nav_menu ul li {
+		float: left;
+	}
+	#nav_menu ul li:hover > ul {
+		display: block;
+	}
+	#nav_menu > ul::after {
+		content: "";
+		clear: both;
+		display: block;
+	}
+	/* formatting for the navigation menu */
+	#nav_menu ul {
+		margin: 0;
+		padding: 0;
+	}
+	#nav_menu ul li {
+		width: 20%;
+	}
+	#nav_menu ul li a {
+		font-size: .87em;
+		text-align: center;
+		display: block;
+		padding: .7em 0;
+		background-color: #B5001B;
+	}
+	#nav_menu ul li a:link, #nav_menu ul li a:visited {
+		color: white !important;
+	}
+	#nav_menu ul li a:hover {
+		color: black !important;
+	}
+
+	#nav_menu ul li a.current {
+		background-color: #cf4040 !important;
+	}
+	#nav_menu ul li:hover ul {
+		width: 100%;
+	}
+	#nav_menu ul li:hover ul li:hover ul li {
+		width: 100%;
+	}
+	article {
+		width: 62.04%;
+		float: left;
+		margin-left: 3.02%;
+		padding: 1.5em 0 1em 0;
+	}
+	article h1 {
+        font-size: 1.25em;
+    }
+	article:last-child {
+		margin-bottom: 2em;
+	}
+	article img {
+		max-width: 100%;
+		margin-right: 0;
+		float: none;
+	}
+	aside {
+		width: 25.35%;
+		float: left;
+		margin: 1.5em 2.02% 0 0;
+	}
+	footer {
+		clear: both;
+		text-align: right;
+		margin-right: 2.02%;
+	}
+}
+/* increase font sizes */
+@media only screen and (min-width: 887px) {
+	header {
+		background-image: linear-gradient(
+		to bottom right, #B8B996 0%, black 100%);
+	}
+	#nav_menu ul li a {
+		font-size: .875em;
+	}
+	article h1 {
+		font-size: 1.5em;
+	}
+	aside h2 {
+		font-size: 1.13em;
+	}
+	aside li {
+		font-size: .87em;
+	}	
+}
+/* increase font sizes and specify max body width, change 100% color of the header*/
+@media only screen and (min-width: 1007px) {
+	body {
+		max-width: 1200px;
+	}
+	#nav_menu ul li a {
+		font-size: .87em;
+	}
+	article h1 {
+		font-size: 1.63em;
+	}
+	aside h2 {
+		font-size: 1.25em;
+	}
+}

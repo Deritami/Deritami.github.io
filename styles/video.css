@@ -1,0 +1,9 @@
+#nav_menu ul li a.current {
+    background-color: #cf4040 !important;
+}
+
+video {
+    width:90%;
+    padding-bottom: 1em;
+}
+
